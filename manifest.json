@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Titleless",
+  "version": "1.0.0",
+  "description": "A toolbar button that hides Reddit post titles.",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Titleless: off"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/*"],
+      "css": ["reddit.css"],
+      "js": ["content.js"]
+    }
+  ]
+}

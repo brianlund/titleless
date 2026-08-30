@@ -1,0 +1,6 @@
+html.no-clickbait shreddit-post [slot="title"],
+html.no-clickbait [data-testid="post-container"] h3,
+html.no-clickbait .Post [data-click-id="body"] h3,
+html.no-clickbait .thing.link a.title {
+  display: none !important;
+}
