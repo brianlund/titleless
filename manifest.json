@@ -3,6 +3,9 @@
   "name": "Titleless",
   "version": "1.0.0",
   "description": "A toolbar button that hides Reddit post titles.",
+  "icons": {
+    "128": "icon-128.png"
+  },
   "permissions": ["storage"],
   "action": {
     "default_title": "Titleless: off"
@@ -12,7 +15,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.reddit.com/*"],
+      "matches": ["https://*.reddit.com/*"],
       "css": ["reddit.css"],
       "js": ["content.js"]
     }

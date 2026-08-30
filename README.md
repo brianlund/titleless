@@ -23,3 +23,7 @@ node test.mjs
 2. Create and push a matching tag, such as `v1.0.1`.
 
 GitHub Actions checks the extension, packages the runtime files, and attaches the ZIP and its SHA-256 checksum to a GitHub Release. Upload that ZIP to the Chrome Web Store.
+
+## Privacy
+
+Titleless collects no user data. See the [privacy policy](PRIVACY.md).

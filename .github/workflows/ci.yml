@@ -22,7 +22,7 @@ jobs:
           node -e 'JSON.parse(require("node:fs").readFileSync("manifest.json", "utf8"))'
       - name: Check package
         run: |
-          git archive --format=zip --output=titleless.zip HEAD manifest.json background.js content.js reddit.css
+          git archive --format=zip --output=titleless.zip HEAD manifest.json background.js content.js reddit.css icon-128.png
           unzip -t titleless.zip
 
   release:
@@ -41,7 +41,7 @@ jobs:
           version="$(node -p 'require("./manifest.json").version')"
           test "v$version" = "$GITHUB_REF_NAME"
           archive="titleless-$version.zip"
-          git archive --format=zip --output="$archive" HEAD manifest.json background.js content.js reddit.css
+          git archive --format=zip --output="$archive" HEAD manifest.json background.js content.js reddit.css icon-128.png
           sha256sum "$archive" > "$archive.sha256"
           echo "archive=$archive" >> "$GITHUB_OUTPUT"
       - name: Create GitHub release
